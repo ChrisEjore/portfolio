@@ -7,16 +7,16 @@
         <a href="#projects">Projects</a><a href="#testimonials">Testimonials</a><a href="#contact">Contact</a>
       </nav>
       <div class="header-actions">
-        <div class="header-cta-wrap">
-          <div *ngIf="showHirePulse" class="hire-pulse" role="status" aria-live="polite">
-            <div class="hire-pulse-visual">
-              <img src="https://cdn3d.iconscout.com/3d/premium/thumb/doctor-with-syringe-3d-icon-png-download-8817535.png" alt="Doctor 3D model available for hire" loading="lazy" />
-            </div>
-            <div class="hire-pulse-copy">
-              <strong>Available</strong>
-              <span>for projects</span>
-            </div>
+        <div *ngIf="showHirePulse" class="hire-pulse" role="status" aria-live="polite">
+          <div class="hire-pulse-visual">
+            <img src="https://cdn3d.iconscout.com/3d/premium/thumb/doctor-with-syringe-3d-icon-png-download-8817535.png" alt="Doctor 3D model available for hire" loading="lazy" />
           </div>
+          <div class="hire-pulse-copy">
+            <strong>Available</strong>
+            <span>for projects</span>
+          </div>
+        </div>
+        <div class="header-cta-wrap">
           <a class="button button-primary header-cta" href="#contact">Hire me <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
         </div>
         <button class="menu-toggle" type="button" (click)="toggleMobileMenu()" [attr.aria-expanded]="isMobileMenuOpen" aria-label="Toggle navigation">
