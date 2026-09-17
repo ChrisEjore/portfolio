@@ -1,25 +1,29 @@
 <div class="portfolio-shell">
   <header class="site-header">
-    <a class="brand" href="#hero" aria-label="Chris Ejore home"><span>CE</span><i></i></a>
-    <nav class="desktop-nav" aria-label="Primary navigation">
-      <a href="#about">About</a><a href="#services">Services</a><a href="#skills">Skills</a>
-      <a href="#projects">Projects</a><a href="#testimonials">Testimonials</a><a href="#contact">Contact</a>
-    </nav>
-    <div class="header-cta-wrap">
-      <div *ngIf="showHirePulse" class="hire-pulse" role="status" aria-live="polite">
-        <div class="hire-pulse-visual">
-          <img src="https://cdn3d.iconscout.com/3d/premium/thumb/doctor-with-syringe-3d-icon-png-download-8817535.png" alt="Doctor 3D model available for hire" loading="lazy" />
+    <div class="site-header-inner">
+      <a class="brand" href="#hero" aria-label="Chris Ejore home"><span>CE</span><i></i></a>
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="#about">About</a><a href="#services">Services</a><a href="#skills">Skills</a>
+        <a href="#projects">Projects</a><a href="#testimonials">Testimonials</a><a href="#contact">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <div class="header-cta-wrap">
+          <div *ngIf="showHirePulse" class="hire-pulse" role="status" aria-live="polite">
+            <div class="hire-pulse-visual">
+              <img src="https://cdn3d.iconscout.com/3d/premium/thumb/doctor-with-syringe-3d-icon-png-download-8817535.png" alt="Doctor 3D model available for hire" loading="lazy" />
+            </div>
+            <div class="hire-pulse-copy">
+              <strong>Available</strong>
+              <span>for projects</span>
+            </div>
+          </div>
+          <a class="button button-primary header-cta" href="#contact">Hire me <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
         </div>
-        <div class="hire-pulse-copy">
-          <strong>Available</strong>
-          <span>for projects</span>
-        </div>
+        <button class="menu-toggle" type="button" (click)="toggleMobileMenu()" [attr.aria-expanded]="isMobileMenuOpen" aria-label="Toggle navigation">
+          <i [class]="isMobileMenuOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'"></i>
+        </button>
       </div>
-      <a class="button button-primary header-cta" href="#contact">Hire me <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
     </div>
-    <button class="menu-toggle" type="button" (click)="toggleMobileMenu()" [attr.aria-expanded]="isMobileMenuOpen" aria-label="Toggle navigation">
-      <i [class]="isMobileMenuOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'"></i>
-    </button>
   </header>
 
   <nav *ngIf="isMobileMenuOpen" class="mobile-nav" aria-label="Mobile navigation">
